@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Chalk Bag Illustrator</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.imagemapster.js"></script>
+        <link type="text/css" rel="stylesheet" href="style.css">
+    </head>
+
+    <body >
+        <div class="desktop">
+            <div class="top">
+            <a href="https://nonoleclimb.wixsite.com/nonoleclimb"><img class="logo" src="photos/logo.png"></a>
+
+                <div class="top-background"></div>
+                <div class="title"><b>Welcome to the chalk bag illustrator!</b></div>
+                <div class="explenation">Click on the chalk-bag and choose your colors</div>
+            </div>
+            <div class="middle">
+                <div class="bag">
+                    <div class="tooltip">
+                        <a href="photos/dark-side.jpg" target="_blank">
+                            <image class="dark-side" src="photos/dark-side.jpg" href="photos/dark-side.jpg">
+                                <span class="dark-side-text">The Dark Side of the Bag</span>
+                            </image>
+                        </a>
+                    </div>
+                    <img src = "photos/base.png" class="base">
+                    <img class = "a" id="A">
+                    <img class = "b" id="B">
+                    <img class = "c" id="C">
+                    <img class = "d" id="D"> 
+                    <img class = "e" id="E">
+                    <img class = "f" id="F">
+                    <img src = "photos/foreground.png" id="foreground" usemap="#base-map" class="map">
+                    <map name="base-map" id="base-map-id" class="base-map-class">
+                        <area id="A-map" bagPart="A" href="#" name="a-part" onclick="changeChosen('A')" coords="222,550,244,531,286,518,337,508,398,498,421,494,419,461,333,474,269,489,235,506,238,494,254,484,278,474,302,466,328,462,358,453,377,448,398,446,429,442,445,440,445,452,447,469,441,485,440,504,435,532,436,551,423,581,383,682,238,688,159,669,210,622,222,608" shape="poly">
+
+                        <area id="B-map" bagPart="B" href="#" name="b-part" onclick="changeChosen('B')"  coords="252,337,311,323,374,323,427,326,460,333,460,351,457,402,452,431,382,444,329,455,300,458,260,474,236,486,249,452,240,424,243,359,243,342" shape="poly">
+
+                        <area  id="C-map"  bagPart="C" href="#" onclick="changeChosen('C')" coords="387,685,503,455,521,510,525,554,528,579,546,614,560,638,588,669,593,678" shape="poly">
+
+                        <area  id="D-map"  bagPart="D" href="#" onclick="changeChosen('D')" coords="443,541,462,413,468,332,517,338,523,384,523,418,521,455,527,502,502,446" shape="poly">
+
+                        <area  id="E-map"  bagPart="E" href="#" onclick="changeChosen('E')" coords="271,102,288,100,321,80,374,72,412,74,448,76,502,85,529,90,533,98,524,115,524,136,523,164,520,214,518,258,509,299,480,301,437,296,389,293,358,292,333,288,300,288,257,302" shape="poly">
+
+                        <area id="F-map"  bagPart="F" href="#" onclick= "changeChosen('F')" coords="592,684,570,676,542,679,509,684,478,683,445,682,421,688,394,691,376,699,349,693,322,694,285,694,247,696,212,685,182,681,166,679,184,688,202,692,214,695,230,698,253,701,269,703,287,705,301,708,331,712,353,712,385,712,417,709,450,707,479,704,512,699,545,697,562,696" shape="poly">
+                    </map>
+
+                </div>
+                <div class="center">
+                    <div id="parts-list-background"></div>
+
+                     <table class="parts-list">
+                        <tr id="E-list">
+                            <th>Top</th>
+                            <td><div class="list-squares" id="E-square"></div></td>
+                        </tr>
+                        <tr id="B-list">
+                            <th>Main</th>
+                            <td><div class="list-squares" id="B-square"></div></td>
+                        </tr>
+                        <tr id="D-list">
+                            <th>Higher Side</th>
+                            <td><div class="list-squares" id="D-square"></div></td>
+                        </tr>
+
+                        <tr id="A-list">
+                            <th>Pockets</th>
+                            <td><div class="list-squares" id="A-square"></div></td>
+                        </tr>
+                        <tr id="C-list">
+                            <th>Lower Side</th>
+                            <td><div class="list-squares" id="C-square"></div></td>
+                        </tr>
+                        <tr id="F-list">
+                            <th>Bottom</th>
+                            <td><div class="list-squares" id="F-square"></div></td>
+                        </tr>
+                    </table>
+                    
+                    <button type="button" href="#" class="center-btn" id="random-btn">Random!</button>
+                    <button type="button" class="center-btn" id="reset-btn">Reset</button>
+
+                </div>
+                <div class = "colors">
+                    <div class="cordura">
+                        <table>
+                            <tr>
+                                <td><img src = "photos/colors/color%20(1).png" id="color-1"></td>
+                                <td><img src = "photos/colors/color%20(2).png" id="color-2"></td>
+                                <td><img src = "photos/colors/color%20(3).png" id="color-3"></td>
+                                <td><img src = "photos/colors/color%20(4).png" id="color-4"></td>
+                                <td><img src = "photos/colors/color%20(5).png" id="color-5"></td>
+                            </tr>
+                            <tr>"
+                                <td><img src = "photos/colors/color%20(6).png" id="color-6" ></td>
+                                <td><img src = "photos/colors/color%20(7).png" id="color-7" ></td>
+                                <td><img src = "photos/colors/color%20(8).png" id="color-8" ></td>
+                                <td><img src = "photos/colors/color%20(9).png" id="color-9" ></td>
+                                <td><img src = "photos/colors/color%20(10).png" id="color-10" ></td>
+                            </tr>
+                                <tr>
+                                <td><img src = "photos/colors/color%20(11).png" id="color-11" ></td>
+                                <td><img src = "photos/colors/color%20(12).png" id="color-12" ></td>
+                                <td><img src = "photos/colors/color%20(13).png" id="color-13" ></td>
+                                <td><img src = "photos/colors/color%20(14).png" id="color-14" ></td>
+                                <td><img src = "photos/colors/color%20(15).png" id="color-15" ></td>
+                            </tr>
+                            <tr>
+                                <td><img src = "photos/colors/color%20(16).png" id="color-16" ></td>
+                                <td><img src = "photos/colors/color%20(17).png" id="color-17" ></td>
+                                <td><img src = "photos/colors/color%20(18).png" id="color-18" ></td>
+                                <td><img src = "photos/colors/color%20(19).png" id="color-19" ></td>
+                                <td><img src = "photos/colors/color%20(20).png" id="color-20" ></td>
+                            </tr>
+                            <tr>
+                                <td><img src = "photos/colors/color%20(21).png" id="color-21" ></td>
+                                <td><img src = "photos/colors/color%20(22).png" id="color-22" ></td>
+                                <td><img src = "photos/colors/color%20(23).png" id="color-23" ></td>
+                                <td><img src = "photos/colors/color%20(24).png" id="color-24" ></td>
+                                <td><img src = "photos/colors/color%20(25).png" id="color-25" ></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="fleece">
+                        <div class="fleece-background"></div>
+                        <p id="fleece-title">Choose the fleece-lining color:</p>
+                        <img id="gray-fleece" src="photos/Fleece/gray.png">
+                        <img id="brown-fleece" src="photos/Fleece/brown.png">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="bottom">
+                <div id="test"></div>
+                <div class="bottom-background"></div>
+                <p id="privacy">These details are necessary for us to contact you. We will not spam you and will not pass these details to anyone else.</p>
+                <form class="submit-form" name="submit-to-google-sheet" enctype="text/plain">
+                <input class="form-field" id="name-field" name="name" placeholder="Name" required>
+                <input class="form-field" id="contact-field" name="contact"  placeholder="Email" required>
+                    <textarea id="comments-field" name="comments"  placeholder="Comments"></textarea>
+
+                <button class="submit-btn" type="submit">Submit</button>
+            </form>
+
+            </div>
+        </div>
+        <div class="mobile">
+            <b>For Desktop Only!</b>
+            <p> Currently the illustrator works only on a bigger screen.
+                If you want to order from this device, <a href="https://goo.gl/forms/0e2k315YEvVWTtOA2"><b>use our form</b></a>
+            </p>
+        </div>
+        <script>
+            var map = $(".map")
+            map.mapster({
+                fill: false,
+                mapKey: 'bagPart',
+                listSelectedClass: 'selected',
+
+                stroke: true,
+                strokeColor: 'F3EC2A',
+                strokeWidth: 6,
+                singleSelect: true,
+                strokeOpacity: 0.5,
+                
+                
+                
+                render_highlight:{
+                    fill: true,
+                    fillColor: '2aff00',
+                    fillOpacity: 0.1,
+
+                },
+                render_select: {
+                    fill: false,
+                },
+            });
+            
+            
+            
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
+
+
