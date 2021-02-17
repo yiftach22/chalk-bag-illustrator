@@ -4,11 +4,11 @@ const url = 'https://script.google.com/macros/s/AKfycbybDLhuZSnn13NjIK95d_drJbnx
 const colors=["ffffff", "191512", "5c5450", "787068", "787068", "e3cbad", "927459", "5d4539", "6b3f29", "672332", "bd101e", "e01d2e", "ff5a2a", "f5a814", "acbc16", "006560", "279564", "1f452f", "34404a", "0068ae", "009ea6", "a3cacf", "0e77aa", "453576", "f54b86"];
 
 
+
 for (i=1;i<26;i++){
-    document.getElementById("color-"+i).addEventListener('click', makeColorFunction(i));
+    colorSquare = document.querySelector(".color-"+i);
+    colorSquare.addEventListener('click', makeColorFunction(i));
 }
-
-
 
 
 
@@ -29,6 +29,15 @@ function highlightOnHover(part){
     list.addEventListener("mouseout", function(){list.classList.remove("parts-list-hover")});
 }
 
+$(".middle").on('click', function(){
+    $("#"+chosenPart+"-list").removeClass("parts-list-click");
+    jmap.mapster('set', null, chosenPart)
+    chosenPart=null;
+})
+
+$(".bag, .colors, .parts-list, .parts-list-background, .center-btn").on('click', function(e){
+    e.stopPropagation();
+})
 
 jmap = $(".map")
 for (i=0;i<6;i++){
@@ -123,8 +132,7 @@ function makeColorFunction(color){
 }
 
 
-function setColor(part, color){
-        
+function setColor(part, color){        
         if (color===null){
             document.getElementById(part).style.display="none";
             document.getElementById(part+'-square').style.backgroundColor="";
@@ -139,7 +147,6 @@ function setColor(part, color){
         document.getElementById(part+'-square').style.opacity="1";
         result[part]=color
 }
-
 
 
 /**********
